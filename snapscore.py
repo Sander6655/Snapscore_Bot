@@ -12,7 +12,7 @@ url = "https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_li
 bestandsnaam = "chromedriver_linux64.zip"
 
 # De map waarin je het ChromeDriver-bestand wilt opslaan
-doelmap = "/workspaces/dev/snapscore/chromedriver_snapscore"  # Vervang dit door de gewenste doelmap op je systeem
+doelmap = "/home/sneakershype77/Snapscore_Bot"  # Vervang dit door de gewenste doelmap op je systeem
 
 # Controleer of de doelmap bestaat, anders maak deze aan
 if not os.path.exists(doelmap):
@@ -107,7 +107,7 @@ if select == "1":
 [Who do you want to spam?]        
 ''')
     spam = input("\n spam> ")
-    google_account_name = input("What is you full google account name?\n google_account_name> ")
+
     
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -125,7 +125,7 @@ options = webdriver.ChromeOptions()
 options.add_argument("--headless")
 
 # Vervang 'path/to/chromedriver' door de daadwerkelijke locatie van de chromedriver op je systeem
-driver = webdriver.Chrome('/workspaces/dev/snapscore/chromedriver_snapscore')
+driver = webdriver.Chrome('/home/sneakershype77/Snapscore_Bot/chromedriver_linux64.zip')
 
 # Open de Snapchat-website
 driver.get("https://accounts.snapchat.com/accounts/login")
@@ -154,7 +154,7 @@ driver.get("https://www.snapchat.com/add/" + ontvanger)
 time.sleep(1)
 
 # Vervang 'path/to/img_to_send.jpg' door de daadwerkelijke locatie van de afbeelding die je wilt verzenden
-afbeelding_pad = 'path/to/img_to_send.jpg'
+afbeelding_pad = '/home/sneakershype77/Snapscore_Bot/img_to_send'
 
 # Zoek de knop om een afbeelding te uploaden en klik erop
 upload_knop = driver.find_element_by_css_selector(".icon-chat-file")
